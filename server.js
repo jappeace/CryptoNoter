@@ -17,6 +17,8 @@ var conf = {};
 if (fs.existsSync(__dirname + '/config.json')) {
   var conf = fs.readFileSync(__dirname + '/config.json', 'utf8');
   conf = JSON.parse(conf);
+}else{
+  console.log("no config file found");
 }
 
 //heroku port
